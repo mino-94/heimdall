@@ -1,4 +1,4 @@
-package com.heimdall.gateway.conf;
+package com.gateway.heimdall.conf;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +10,7 @@ import org.springframework.util.CollectionUtils;
 
 import java.util.List;
 
-import static com.heimdall.gateway.values.Values.INSTANCE_INFO;
+import static com.gateway.heimdall.values.Values.INSTANCE_INFO;
 
 @Slf4j
 @Configuration

@@ -1,4 +1,4 @@
-package com.heimdall.gateway.filter;
+package com.gateway.heimdall.filter;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;

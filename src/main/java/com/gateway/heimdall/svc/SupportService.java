@@ -1,6 +1,6 @@
-package com.heimdall.gateway.svc;
+package com.gateway.heimdall.svc;
 
-import com.heimdall.gateway.values.Values;
+import com.gateway.heimdall.values.Values;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;

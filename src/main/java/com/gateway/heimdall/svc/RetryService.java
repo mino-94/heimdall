@@ -1,4 +1,4 @@
-package com.heimdall.gateway.svc;
+package com.gateway.heimdall.svc;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

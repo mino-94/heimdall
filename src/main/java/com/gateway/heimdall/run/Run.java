@@ -1,4 +1,4 @@
-package com.heimdall.gateway.run;
+package com.gateway.heimdall.run;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

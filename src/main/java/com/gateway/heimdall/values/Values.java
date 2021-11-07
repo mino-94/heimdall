@@ -1,4 +1,4 @@
-package com.heimdall.gateway.values;
+package com.gateway.heimdall.values;
 
 import java.util.HashMap;
 import java.util.Map;

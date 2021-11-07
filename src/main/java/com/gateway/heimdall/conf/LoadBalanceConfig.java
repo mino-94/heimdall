@@ -1,4 +1,4 @@
-package com.heimdall.gateway.conf;
+package com.gateway.heimdall.conf;
 
 import lombok.Data;
 import org.apache.http.client.HttpClient;

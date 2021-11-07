@@ -1,7 +1,7 @@
-package com.heimdall.gateway.ctr;
+package com.gateway.heimdall.ctr;
 
-import com.heimdall.gateway.svc.RetryService;
-import com.heimdall.gateway.svc.SupportService;
+import com.gateway.heimdall.svc.RetryService;
+import com.gateway.heimdall.svc.SupportService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
