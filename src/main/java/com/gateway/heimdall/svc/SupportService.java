@@ -5,6 +5,7 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.LinkedMultiValueMap;
@@ -14,8 +15,8 @@ import org.springframework.web.client.HttpServerErrorException;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 @Service
 public class SupportService {
@@ -77,21 +78,21 @@ public class SupportService {
             result.put("resBody", ((HttpServerErrorException) e).getResponseBodyAsString());
             result.put("statusCode", ((HttpServerErrorException) e).getStatusCode());
         } else {
-            result = null;
+            result.put("resBody", e.getMessage());
+            result.put("statusCode", HttpStatus.INTERNAL_SERVER_ERROR);
         }
         return result;
     }
 
     public Map parseMap(HttpServletRequest request) {
+        Map parse = new HashMap<>();
         Map param = request.getParameterMap();
-        Iterator<String> iterator = param.keySet().iterator();
-        String key = "";
+        Set<String> keys = param.keySet();
 
-        while (iterator.hasNext()) {
-            key = iterator.next();
-            param.put(key, ((String[])param.get(key))[0]);
+        for (String key : keys) {
+            parse.put(key, ((String[]) param.get(key))[0]);
         }
-        return param;
+        return parse;
     }
 
     private boolean isGetPost(String gubn) {

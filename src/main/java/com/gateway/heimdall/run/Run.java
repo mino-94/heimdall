@@ -11,7 +11,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableRetry
 @EnableScheduling
 @EnableAsync
-@SpringBootApplication(scanBasePackages = "com.heimdall.gateway")
+@SpringBootApplication(scanBasePackages = "com.gateway.heimdall")
 public class Run {
 
 
